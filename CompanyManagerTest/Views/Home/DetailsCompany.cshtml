@@ -1,0 +1,70 @@
+﻿@model CompanyManagerTest.Models.Company
+@{
+    ViewBag.Title = Model.CompanyName;
+}
+<style>
+
+    table.Mytable {
+        text-decoration: none;
+        border-collapse: collapse;
+        width: 100%;
+        text-align: center;
+    }
+
+        table.Mytable th {
+            font-weight: normal;
+            font-size: 14px;
+            color: #000000;
+            background-color: #ffffff;
+        }
+
+        table.Mytable td {
+            font-size: 13px;
+            color: #354251;
+        }
+
+        table.Mytable td, table.Mytable th {
+            white-space: pre-wrap;
+            padding: 10px 5px;
+            line-height: 13px;
+            vertical-align: middle;
+            border: 1px solid #354251;
+        }
+
+        table.Mytable tr:hover {
+            background-color: #f9fafb
+        }
+
+            table.Mytable tr:hover td {
+                color: #354251;
+                cursor: default;
+            }
+</style>
+<h2>Company @Model.CompanyName</h2>
+
+<div>
+    <table class="Mytable">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Form</th>
+                <th>Company name</th>
+                <th>Total workers</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.Id</td>
+                <td>@Model.CompanyForm</td>
+                <td>@Model.CompanyName</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <input type="button" onclick="history.back();" value="Back" />
+</div>
+
+
+
+

@@ -1,0 +1,22 @@
+﻿@model CompanyManagerTest.Models.Company
+@{
+    ViewBag.Title = "Remove company";
+}
+
+<div>
+    <dl>
+        <dt>Company Name</dt>
+        <dd>
+            @Html.DisplayFor(model => model.CompanyName)
+        </dd>
+    </dl>
+
+    <div>
+        <form asp-controller="Home" asp-action="DeleteCompany" method="post">
+            <div class="form-group">
+                <input type="submit" class="btn btn-default" value="Remove" />
+                <input type="button" onclick="history.back();" value="Cancel" />
+            </div>
+        </form>
+    </div>
+</div>

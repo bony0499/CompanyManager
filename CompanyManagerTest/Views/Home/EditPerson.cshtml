@@ -1,0 +1,32 @@
+﻿@model CompanyManagerTest.Models.Employee
+@{
+    ViewBag.Title = "Edit employee";
+}
+<form asp-action="EditPerson" asp-controller="Home">
+    <div>
+        <label asp-for="Name" class="control-label">Worker name</label>
+        <input type="text" asp-for="Name" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Surname" class="control-label">Worker surname</label>
+        <input type="text" asp-for="Surname" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Patronymic" class="control-label">Worker patronymic</label>
+        <input type="text" asp-for="Patronymic" class="form-control" />
+    </div>
+    <label asp-for="Rank" class="control-label">Worker rank</label>
+    <input type="text" asp-for="Rank" class="form-control" />
+    <div>
+        <label asp-for="HiringDate" class="control-label">Hiring date</label>
+        <input type="text" asp-for="HiringDate" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Company" class="control-label">Company</label>
+        <input type="text" asp-for="Company" class="form-control" />
+    </div>
+    <div>
+        <input type="submit" value="Edit" />
+        <input type="button" onclick="history.back();" value="Cancel" />
+    </div>
+</form>

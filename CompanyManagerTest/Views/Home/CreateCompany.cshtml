@@ -1,0 +1,18 @@
+﻿@model CompanyManagerTest.Models.Company
+@{
+    ViewBag.Title = "Create company";
+}
+<form asp-action="CreateCompany" asp-controller="Home">
+    <div class>
+        <label asp-for="CompanyName" class="control-label">Companies name</label>
+        <input type="text" asp-for="CompanyName" class="form-control" />
+    </div>
+    <div class>
+        <label asp-for="CompanyForm">Form of company</label>
+        <input type="text" asp-for="CompanyForm" class="form-control" />
+    </div>
+    <div>
+        <input type="submit" value="Create" />
+        <input type="button" onclick="history.back();" value="Cancel" />
+    </div>
+</form>

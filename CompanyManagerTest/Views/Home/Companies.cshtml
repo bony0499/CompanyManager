@@ -1,0 +1,25 @@
+﻿@model IEnumerable<CompanyManagerTest.Models.Company>
+@{
+    ViewBag.Title = "All Companies";
+}
+
+<a asp-action="CreateCompany">CreateCompany</a>
+
+<table class="table">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CompanyName</td>
+            <td>
+                <a asp-action="DetailsCompany" asp-controller="Home" asp-route-id="@item.Id">More details</a> |
+                <a asp-action="EditCompany" asp-controller="Home" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="DeleteCompany" asp-controller="Home" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+
+</table>
+<div>
+    <input type="button" onclick="history.back();" value="Back" />
+</div>
